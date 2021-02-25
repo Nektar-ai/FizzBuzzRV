@@ -11,9 +11,15 @@ namespace FizzBuzzRV
 		public static string Ask(int number)
 		{
 			if (number == 0)
-			{
+			{	
 				throw new ArgumentException("0");
 			}
+
+			if (number < 0)
+			{
+				throw new ArgumentException("Negative");
+			}
+
 			return "";
 		}
 
