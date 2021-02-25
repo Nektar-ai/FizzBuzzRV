@@ -32,5 +32,11 @@ namespace FizzBuzzRVTest
         {
             Assert.AreEqual("Buzz", FizzBuzz.Ask(5));
         }
+
+        [TestMethod]
+        public void FizzBuzzWith15()
+        {
+            Assert.AreEqual("FizzBuzz", FizzBuzz.Ask(15));
+        }
     }
 }
