@@ -20,6 +20,11 @@ namespace FizzBuzzRV
 				throw new ArgumentException("Negative");
 			}
 
+			if (number % 3 == 0)
+			{
+				return "Fizz";
+			}
+
 			return "";
 		}
 
