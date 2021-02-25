@@ -13,5 +13,12 @@ namespace FizzBuzzRVTest
         {
             FizzBuzz.Ask(0);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ThrowArgumentExceptionFizzBuzzWithNeg1()
+        {
+            FizzBuzz.Ask(-1);
+        }
     }
 }
