@@ -1,9 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using FizzBuzzRV;
-using System.IO;
-using Moq;
-using Times = Moq.Times;
 
 namespace FizzBuzzRVTest
 {
@@ -46,20 +43,6 @@ namespace FizzBuzzRVTest
         public void FizzBuzzWith4()
         {
             Assert.AreEqual("4", FizzBuzz.Ask(4));
-        }
-
-        [TestMethod]
-        public void GameConsoleWriteWelcomeInFizzBuzz()
-        {
-            var writer = new Mock<IOutputWriter>();
-            var mock = new Mock<FizzBuzz>(writer.Object, new object[] { "Welcome to Fizzbuzz ! Press any key to launch.", true });
-            mock.CallBase = true;
-            var Game = mock.Object;
-
-            Game.Jeu();
-
-            mock.Verify(m => m.Jeu(), Times.Exactly(1));
-            writer.Verify(w => w.WriteLine(It.Is<string>(s => s == "Welcome to Fizzbuzz ! Press any key to launch.")), Times.Once);
         }
     }
 }
