@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FizzBuzzRV
 {
-    class FizzBuzz
+    public static class FizzBuzz
     {
     }
 }

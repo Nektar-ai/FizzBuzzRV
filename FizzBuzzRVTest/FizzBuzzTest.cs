@@ -8,8 +8,10 @@ namespace FizzBuzzRVTest
     public class FizzBuzzTest
     {
         [TestMethod]
-        public void TestMethod1()
+        [ExpectedException(typeof(ArgumentException))]
+        public void ThrowArgumentExceptionFizzBuzzWith0()
         {
+            FizzBuzz.Ask(0);
         }
     }
 }
