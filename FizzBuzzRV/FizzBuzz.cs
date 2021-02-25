@@ -35,8 +35,7 @@ namespace FizzBuzzRV
 				return "Buzz";
 			}
 
-			return "";
+			return number.ToString();
 		}
-
 	}
 }
